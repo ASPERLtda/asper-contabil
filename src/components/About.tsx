@@ -36,7 +36,7 @@ const About = () => {
               </h2>
             </div>
 
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-muted-foreground leading-relaxed text-justify">
               <p>
                 Com mais de 09 anos de atuação no mercado, sou especialista em perícias contábeis judiciais e extrajudiciais,
                  oferecendo análises técnicas precisas e laudos fundamentados nas normas brasileiras de contabilidade.

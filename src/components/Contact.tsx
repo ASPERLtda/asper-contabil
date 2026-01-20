@@ -1,19 +1,25 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useRef } from "react";
 import { Mail, Phone, MapPin, Clock, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 // Configuração do EmailJS
 const EMAILJS_SERVICE_ID = "service_07ucocr";
 const EMAILJS_TEMPLATE_ID = "template_xxikbcj";
 const EMAILJS_PUBLIC_KEY = "RL4v4wonOZT7BZEZj";
 
+// Configuração do reCAPTCHA
+const RECAPTCHA_SITE_KEY = "6LfE8lAsAAAAAMX6Oze-X5Y6B6SJdJ4j-MYmPxRi";
+
 const Contact = () => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
@@ -27,8 +33,22 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token);
+  };
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
+    if (!captchaToken) {
+      toast({
+        title: "Verificação necessária",
+        description: "Por favor, confirme que você não é um robô.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -58,6 +78,10 @@ const Contact = () => {
         servico: "",
         mensagem: "",
       });
+
+      // Reset do captcha após envio
+      setCaptchaToken(null);
+      recaptchaRef.current?.reset();
     } catch (error) {
       toast({
         title: "Erro ao enviar",
@@ -232,7 +256,15 @@ const Contact = () => {
                 />
               </div>
 
-              <Button className="w-full h-12 group" size="lg" disabled={isLoading}>
+              <div className="mb-6 flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={RECAPTCHA_SITE_KEY}
+                  onChange={handleCaptchaChange}
+                />
+              </div>
+
+              <Button className="w-full h-12 group" size="lg" disabled={isLoading || !captchaToken}>
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 w-4 h-4 animate-spin" />

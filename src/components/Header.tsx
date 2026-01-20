@@ -37,9 +37,9 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <Button variant="default" size="sm" className="ml-4" asChild>
+            <Button variant="secondary" size="sm" className="ml-4 group font-semibold" asChild>
               <a href="https://wa.me/message/HRU5OY3BFNFME1" target="_blank" rel="noopener noreferrer">
-                Agendar Consulta
+                Entrar em Contato
               </a>
             </Button>
           </nav>
@@ -68,9 +68,9 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <Button variant="default" className="mt-4 w-full" asChild>
+              <Button variant="secondary" className="mt-4 w-full group font-semibold" asChild>
                 <a href="https://wa.me/message/HRU5OY3BFNFME1" target="_blank" rel="noopener noreferrer">
-                  Agendar Consulta
+                  Entrar em Contato
                 </a>
               </Button>
             </div>

@@ -82,7 +82,7 @@ const Services = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed text-justify">
                   {service.description}
                 </p>
               </CardContent>
