@@ -28,7 +28,7 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2 bg-cream/10 backdrop-blur-sm rounded-full px-4 py-2 animate-fade-in">
               <Target className="w-4 h-4 text-gold" />
               <span className="text-sm font-medium">
-                +09 anos de experiência em perícia contábil
+                +09 anos de experiência em Perícia Contábil
               </span>
             </div>
 
@@ -38,7 +38,7 @@ const Hero = () => {
             >
               Alerrandro Silva
               <span className="block text-gradient-gold mt-2">
-               Perito Contábil Judicial
+               Perito Contábil
               </span>
             </h1>
 
@@ -47,8 +47,7 @@ const Hero = () => {
               style={{ animationDelay: "0.2s" }}
             >
               Especialista em perícias contábeis judiciais e extrajudiciais.
-              Laudos técnicos precisos e fundamentados para a defesa dos seus
-              direitos.
+              Laudos técnicos precisos e fundamentados para embasar decisões estratégicas e potencializar resultados financeiros do seu escritório.
             </p>
 
             <div

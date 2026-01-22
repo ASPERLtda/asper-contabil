@@ -31,26 +31,30 @@ const About = () => {
                 Sobre Mim
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight">
-                Expertise e Compromisso com a{" "}
-                <span className="text-gold">Excelência</span>
+                Alerrandro Silva
               </h2>
+              <div className="flex items-center gap-3 mt-2">
+                <span className="text-gold font-semibold text-lg">Contador</span>
+                <span className="text-muted-foreground">•</span>
+                <span className="text-muted-foreground text-lg">CRC 124937</span>
+              </div>
             </div>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed text-justify">
               <p>
-                Com mais de 09 anos de atuação no mercado, sou especialista em perícias contábeis judiciais e extrajudiciais,
-                 oferecendo análises técnicas precisas e laudos fundamentados nas normas brasileiras de contabilidade.
-              </p>
-              <p>
-                Minha formação sólida e experiência diversificada me permitem atuar em diferentes áreas,
-                 desde a elaboração de pareceres técnicos e laudos periciais na esfera trabalhista e cível,
-                  sempre entregando resultados sólidos para a parta em que estou prestando assistência técnica.
-              </p>
-              <p>
-                A <b>ASPER</b> auxilia os advogados, empresas e partes em processos judiciais e extrajudiciais. 
-                Através da nossa consultoria especializada, atuamos em todas as fases processuais, sempre com fundamentação técnica rigorosa,
-                 contribuindo para o fortalecimento da estratégia jurídica e proporcionando segurança e confiabilidade aos resultados. Atendemos em todo o Brasil.
+                Com mais de 9 anos de atuação no mercado, sou especialista em perícias contábeis judiciais e extrajudiciais,
+                 atuando na elaboração de análises técnicas precisas e laudos periciais fundamentados, em conformidade com as normas brasileiras de contabilidade.
 
+              </p>
+              <p>
+               Minha formação e experiência diversificada permitem atuação em diferentes áreas do Direito,
+                com destaque para as esferas trabalhista e cível, abrangendo a elaboração de pareceres técnicos,
+                 laudos periciais e assistências técnicas, sempre com rigor metodológico e adequada valoração econômica das demandas.
+              </p>
+              <p>
+                Desse modo, a <b>ASPER</b> foi criada para auxiliar advogados, empresas e partes em demandas judiciais e extrajudiciais. 
+                Através da nossa consultoria especializada, atuamos em todas as fases processuais, sempre com fundamentação técnica rigorosa,
+                 contribuindo para o fortalecimento da estratégia jurídica e proporcionando segurança e confiabilidade aos resultados.
               </p>
             </div>  
           </div>

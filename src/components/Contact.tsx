@@ -127,13 +127,11 @@ const Contact = () => {
           <p className="text-gold font-medium text-sm tracking-wider uppercase mb-3">
             Contato
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight mb-4">
-            Vamos Conversar Sobre o{" "}
-            <span className="text-gold">Seu Caso</span>
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground leading-tight mb-4 whitespace-nowrap">
+            Solicite um Orçamento <span className="text-gold">Técnico Especializado</span>
           </h2>
           <p className="text-muted-foreground">
-            Entre em contato para agendar uma consulta ou tirar suas dúvidas
-            sobre os serviços de perícia contábil.
+            Entre em contato para solicitar orçamento e obter suporte técnico especializado em perícia contábil judicial e extrajudicial.
           </p>
         </div>
 
@@ -168,14 +166,14 @@ const Contact = () => {
             {/* CTA Card */}
             <div className="bg-hero-gradient rounded-2xl p-6 text-cream">
               <h3 className="font-display text-xl font-semibold mb-3">
-                Agende seu Atendimento
+                Solicite um Orçamento Técnico
               </h3>
               <p className="text-cream/70 text-sm mb-4">
                 Solicite seu orçamento sem compromisso e com análise técnica adequada a sua necessidade.
               </p>
               <Button variant="secondary" size="sm" asChild>
                 <a href="https://wa.me/message/HRU5OY3BFNFME1" target="_blank" rel="noopener noreferrer">
-                  Agendar Agora
+                  Entrar em Contato
                 </a>
               </Button>
             </div>
